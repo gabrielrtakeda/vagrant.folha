@@ -6,7 +6,8 @@ source $bashFolder/config-constants.sh
 ###
 # Setup Oracle Instant Client v10.2.0.4.0
 ###
-INSTANTCLIENT_DIRECTORY="${HOME_DIRECTORY}/instantclient_10_2"
+INSTANTCLIENT_DOWNLOADED_DIRECTORY="${HOME_DIRECTORY}/instantclient_10_2"
+INSTANTCLIENT_DIRECTORY="${LOCAL_DIRECTORY}/instantclient_10_2"
 INSTANTCLIENT_MODULES_LIST=( 'basic' 'devel' 'sqlplus' )
 for module in "${INSTANTCLIENT_MODULES_LIST[@]}"
 do
@@ -15,7 +16,7 @@ do
     unzip $file
     rm $file
 done
-mv $INSTANTCLIENT_DIRECTORY/ $LOCAL_DIRECTORY/
+mv $INSTANTCLIENT_DOWNLOADED_DIRECTORY/ $LOCAL_DIRECTORY/
 ln -s $INSTANTCLIENT_DIRECTORY/libclntsh.so.10.1 $INSTANTCLIENT_DIRECTORY/libclntsh.so
 ln -s $INSTANTCLIENT_DIRECTORY/libocci.so.10.1 $INSTANTCLIENT_DIRECTORY/libocci.so
 sh -c "echo '' >> /etc/profile"
