@@ -13,7 +13,7 @@ end
 # you're doing.
 Vagrant.configure(2) do |config|
   config.vm.box = "hansode/centos-5.7-i386"
-  config.vm.network :forwarded_port, host: 6969, guest: 80
+  config.vm.network :forwarded_port, host: 6666, guest: 80
   config.vm.synced_folder "/media/dev_desenvolvedores/110/", "/srv/vm206", :create => true
 
   config.vm.provider "virtualbox" do |vb|
