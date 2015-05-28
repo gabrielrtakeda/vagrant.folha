@@ -183,4 +183,5 @@ Xdebug                                          !
 ###
 # YUM: Há algumas diferenças entre os packages instalados.
 # Command Comparison: yum list installed
+# VM206 => Vagrant VM206
 ###
