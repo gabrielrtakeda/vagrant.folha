@@ -21,3 +21,4 @@ make -C $PHP_DIRECTORY
 make install -C $PHP_DIRECTORY
 rm -rf $PHP_TARFILE $PHP_DIRECTORY
 ln -s $PHP_PREFIX_DIRECTORY/ $LOCAL_DIRECTORY/php5
+ln -s $LOCAL_DIRECTORY/php5/bin/php /usr/bin/php

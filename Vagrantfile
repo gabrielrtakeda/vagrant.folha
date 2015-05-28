@@ -23,6 +23,7 @@ Vagrant.configure(2) do |config|
     # Customize the amount of memory on the VM:
     vb.memory = "512"
   end
+
   config.vm.provision "shell", path: "bash/disable-selinux.sh"
   config.vm.provision :reload
   config.vm.provision "shell", path: "bash/yum-packages.sh"
